@@ -1,18 +1,10 @@
 pipeline {
-
- agent any
-
- stages {
-
-  stage('Example build'){
-
-    steps {
-    
-     echo 'Hello world'
-
+    agent any 
+    stages {
+        stage('Example Build') {
+            steps {
+                sh 'mvn -B clean verify'
+            }
+        }
     }
-
-  }
-
- }
 }
